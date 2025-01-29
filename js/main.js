@@ -325,11 +325,9 @@
 	function confirmar(){
 		var name = document.getElementById("name").value
 		var telefono = document.getElementById("telefono").value
-		var number = document.getElementById("numInv").innerHTML;
-		number = number.substring(30,32);
-		// number = number.slice(-6);
+
 		var confirmText = "";
-		var selNumInv = number;
+		var selNumInv = $( "#selNumInv" ).val();
 		var radioValue = $("input[name='confirm']:checked").val();
 		if(radioValue == "confirm"){
 			confirmText = "Asistiré"
@@ -445,7 +443,9 @@
 			let btn2 = document.querySelector(".btn-flotante")
 			btn2.click();
 		});
-		
+		for (var i = 0; i <= number; i++) {
+			$('#selNumInv').append('<option style="color:black" value="'+i+'">'+i+'</option>');
+		}
 	});
 
 
